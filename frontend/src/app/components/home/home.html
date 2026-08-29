@@ -1,0 +1,352 @@
+<div class="home-page">
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="badge">
+        Find your next opportunity
+      </div>
+
+      <h1>
+        Find a Job You
+        <span>Love.</span>
+      </h1>
+
+      <p>
+        Discover the latest job opportunities from growing companies
+        and take the next step in your career.
+      </p>
+
+
+      <!-- SEARCH BOX -->
+
+      <div class="search-box">
+
+  <div class="search-field">
+
+    <span class="search-icon">🔍</span>
+
+    <input
+      type="text"
+      name="searchJob"
+      [(ngModel)]="searchJob"
+      placeholder="Job title or keyword"
+    >
+
+  </div>
+
+
+  <div class="search-field">
+
+    <span class="search-icon">📍</span>
+
+    <input
+      type="text"
+      name="location"
+      [(ngModel)]="location"
+      placeholder="Location"
+    >
+
+  </div>
+
+
+  <div class="search-field">
+
+    <span class="search-icon">💼</span>
+
+    <select
+      name="category"
+      [(ngModel)]="category">
+
+      <option value="">
+        All Categories
+      </option>
+
+      <option value="Frontend">
+        Frontend
+      </option>
+
+      <option value="Backend">
+        Backend
+      </option>
+
+      <option value="Full Stack">
+        Full Stack
+      </option>
+
+      <option value="Java">
+        Java
+      </option>
+
+      <option value="Python">
+        Python
+      </option>
+
+      <option value="UI/UX">
+        UI/UX
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <button
+    type="button"
+    class="search-btn"
+    (click)="searchJobs()">
+
+    Search Jobs
+
+  </button>
+
+</div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPLORE SECTION -->
+
+  <section class="explore-section">
+
+    <div class="section-heading">
+
+      <span class="section-label">
+        EXPLORE OPPORTUNITIES
+      </span>
+
+      <h2>
+        Find the right job for your skills
+      </h2>
+
+      <p>
+        Explore popular career categories and discover opportunities
+        that match your interests.
+      </p>
+
+    </div>
+
+
+    <div class="category-grid">
+
+
+      <!-- FRONTEND -->
+
+      <div class="category-card">
+
+        <div class="category-icon">
+          💻
+        </div>
+
+        <h3>
+          Frontend Development
+        </h3>
+
+        <p>
+          Angular, React, HTML, CSS and modern web development roles.
+        </p>
+
+        <button
+          type="button"
+          (click)="category='Frontend'; searchJobs()">
+
+          Explore Jobs →
+
+        </button>
+
+      </div>
+
+
+      <!-- BACKEND -->
+
+      <div class="category-card">
+
+        <div class="category-icon">
+          ⚙️
+        </div>
+
+        <h3>
+          Backend Development
+        </h3>
+
+        <p>
+          Node.js, Java, Python, APIs and server-side opportunities.
+        </p>
+
+        <button
+          type="button"
+          (click)="category='Backend'; searchJobs()">
+
+          Explore Jobs →
+
+        </button>
+
+      </div>
+
+
+      <!-- FULL STACK -->
+
+      <div class="category-card">
+
+        <div class="category-icon">
+          🔗
+        </div>
+
+        <h3>
+          Full Stack
+        </h3>
+
+        <p>
+          Build complete web applications using frontend and backend.
+        </p>
+
+        <button
+          type="button"
+          (click)="category='Full Stack'; searchJobs()">
+
+          Explore Jobs →
+
+        </button>
+
+      </div>
+
+
+      <!-- UI UX -->
+
+      <div class="category-card">
+
+        <div class="category-icon">
+          🎨
+        </div>
+
+        <h3>
+          UI/UX Design
+        </h3>
+
+        <p>
+          Creative design, user experience and product design roles.
+        </p>
+
+        <button
+          type="button"
+          (click)="category='UI/UX'; searchJobs()">
+
+          Explore Jobs →
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY JOBHUB -->
+
+  <section class="why-section">
+
+    <div class="section-heading">
+
+      <span class="section-label">
+        WHY JOBHUB
+      </span>
+
+      <h2>
+        Everything you need for your job search
+      </h2>
+
+    </div>
+
+
+    <div class="features">
+
+
+      <div class="feature-card">
+
+        <div class="feature-icon">
+          🔎
+        </div>
+
+        <h3>
+          Smart Job Search
+        </h3>
+
+        <p>
+          Find opportunities quickly using title, location and category filters.
+        </p>
+
+      </div>
+
+
+      <div class="feature-card">
+
+        <div class="feature-icon">
+          📋
+        </div>
+
+        <h3>
+          Track Applications
+        </h3>
+
+        <p>
+          Keep all your job applications organized in one place.
+        </p>
+
+      </div>
+
+
+      <div class="feature-card">
+
+        <div class="feature-icon">
+          👤
+        </div>
+
+        <h3>
+          Professional Profile
+        </h3>
+
+        <p>
+          Maintain your candidate profile and manage your career information.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CALL TO ACTION -->
+
+  <section class="cta-section">
+
+    <div class="cta-content">
+
+      <h2>
+        Ready to find your next opportunity?
+      </h2>
+
+      <p>
+        Explore jobs and take the next step in your career today.
+      </p>
+
+      <button
+        routerLink="/jobs"
+        class="cta-btn">
+
+        Browse Jobs
+
+      </button>
+
+    </div>
+
+  </section>
+
+
+</div>

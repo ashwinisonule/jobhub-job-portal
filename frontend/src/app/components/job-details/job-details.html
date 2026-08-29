@@ -1,0 +1,85 @@
+<div class="details-page">
+
+  <div
+    *ngIf="job"
+    class="details-card">
+
+    <span class="category">
+      {{ job.category }}
+    </span>
+
+    <h1>
+      {{ job.title }}
+    </h1>
+
+    <h3>
+      {{ job.company }}
+    </h3>
+
+
+    <div class="job-info">
+
+      <div class="info-box">
+        <span>Location</span>
+        <strong>
+          {{ job.location }}
+        </strong>
+      </div>
+
+      <div class="info-box">
+        <span>Salary</span>
+        <strong>
+          {{ job.salary }}
+        </strong>
+      </div>
+
+      <div class="info-box">
+        <span>Job Type</span>
+        <strong>
+          {{ job.jobType }}
+        </strong>
+      </div>
+
+    </div>
+
+
+    <div class="description">
+
+      <h2>Job Description</h2>
+
+      <p>
+        {{ job.description }}
+      </p>
+
+    </div>
+
+
+    <button
+      class="apply-btn"
+      (click)="applyJob()">
+
+      Apply Now
+
+    </button>
+
+  </div>
+
+
+  <div
+    *ngIf="!job"
+    class="not-found">
+
+    <h2>
+      Job Details Not Found
+    </h2>
+
+    <button
+      (click)="router.navigate(['/jobs'])">
+
+      Back to Jobs
+
+    </button>
+
+  </div>
+
+</div>

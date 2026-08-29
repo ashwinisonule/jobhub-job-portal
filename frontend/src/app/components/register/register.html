@@ -1,0 +1,66 @@
+<div class="register-page">
+
+  <div class="register-card">
+
+    <div class="brand">
+      JOB<span>HUB</span>
+    </div>
+
+    <h1>Create Account</h1>
+
+    <p>
+      Create your account and start exploring jobs.
+    </p>
+
+    <form
+      (ngSubmit)="register()">
+
+      <label>Full Name</label>
+
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="user.name"
+        placeholder="Enter your name"
+        required
+      >
+
+      <label>Email</label>
+
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="user.email"
+        placeholder="Enter your email"
+        required
+      >
+
+      <label>Password</label>
+
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="user.password"
+        placeholder="Create a password"
+        required
+      >
+
+      <button type="submit">
+        Create Account
+      </button>
+
+    </form>
+
+    <div class="bottom-text">
+
+      Already have an account?
+
+      <a routerLink="/login">
+        Login
+      </a>
+
+    </div>
+
+  </div>
+
+</div>

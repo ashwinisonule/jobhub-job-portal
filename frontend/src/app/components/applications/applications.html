@@ -1,0 +1,160 @@
+<div class="applications-page">
+
+  <div class="page-header">
+
+    <span class="page-label">
+      JOBHUB
+    </span>
+
+    <h1>My Applications</h1>
+
+    <p>
+      Track the jobs you have applied for.
+    </p>
+
+  </div>
+
+
+  <!-- LOADING -->
+
+  <div
+    *ngIf="loading"
+    class="loading">
+
+    Loading applications...
+
+  </div>
+
+
+  <!-- APPLICATION LIST -->
+
+  <div
+    *ngIf="!loading && applications.length > 0"
+    class="applications-list">
+
+    <div
+      class="application-card"
+      *ngFor="let application of applications">
+
+
+      <div class="company-logo">
+
+        {{ application.company.charAt(0).toUpperCase() }}
+
+      </div>
+
+
+      <div class="application-content">
+
+        <h2>
+          {{ application.jobTitle }}
+        </h2>
+
+        <h3>
+          {{ application.company }}
+        </h3>
+
+
+        <div class="details-row">
+
+          <span>
+            👤 {{ application.candidateName }}
+          </span>
+
+          <span>
+            📧 {{ application.candidateEmail }}
+          </span>
+
+        </div>
+
+
+        <div class="details-row">
+
+          <span>
+            📞 {{ application.phone }}
+          </span>
+
+          <span>
+            🎓 {{ application.education }}
+          </span>
+
+        </div>
+
+
+        <div class="skills">
+
+          <strong>Skills:</strong>
+
+          {{ application.skills }}
+
+        </div>
+
+
+        <div
+          *ngIf="application.coverLetter"
+          class="cover-letter">
+
+          <strong>Cover Letter:</strong>
+
+          <p>
+            {{ application.coverLetter }}
+          </p>
+
+        </div>
+
+
+        <div class="applied-date">
+
+          Applied on:
+          {{ application.createdAt | date:'dd MMM yyyy' }}
+
+        </div>
+
+      </div>
+
+
+      <div class="status-area">
+
+        <span
+          class="status"
+          [class.shortlisted]="
+            application.status === 'Shortlisted'
+          "
+          [class.rejected]="
+            application.status === 'Rejected'
+          ">
+
+          {{ application.status }}
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- EMPTY -->
+
+  <div
+    *ngIf="!loading && applications.length === 0"
+    class="empty-state">
+
+    <div class="empty-icon">
+      📋
+    </div>
+
+    <h2>No Applications Yet</h2>
+
+    <p>
+      You haven't applied for any jobs yet.
+    </p>
+
+    <a routerLink="/jobs">
+      Browse Jobs
+    </a>
+
+  </div>
+
+</div>

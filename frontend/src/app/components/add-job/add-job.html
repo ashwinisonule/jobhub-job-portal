@@ -1,0 +1,208 @@
+<div class="add-job-page">
+
+  <div class="form-card">
+
+    <div class="form-header">
+      <span>JOBHUB</span>
+
+      <h1>Post a New Job</h1>
+
+      <p>
+        Add a new opportunity to your JobHub listings.
+      </p>
+    </div>
+
+
+    <form (ngSubmit)="addJob()">
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label>Job Title</label>
+
+          <input
+            type="text"
+            name="title"
+            [(ngModel)]="job.title"
+            placeholder="e.g. Frontend Developer"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Company</label>
+
+          <input
+            type="text"
+            name="company"
+            [(ngModel)]="job.company"
+            placeholder="e.g. Infosys"
+            required
+          >
+
+        </div>
+
+      </div>
+
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label>Location</label>
+
+          <input
+            type="text"
+            name="location"
+            [(ngModel)]="job.location"
+            placeholder="e.g. Pune"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Category</label>
+
+          <select
+            name="category"
+            [(ngModel)]="job.category"
+            required
+          >
+
+            <option value="">
+              Select Category
+            </option>
+
+            <option value="Frontend">
+              Frontend
+            </option>
+
+            <option value="Backend">
+              Backend
+            </option>
+
+            <option value="Full Stack">
+              Full Stack
+            </option>
+
+            <option value="Java">
+              Java
+            </option>
+
+            <option value="Python">
+              Python
+            </option>
+
+            <option value="UI/UX">
+              UI/UX
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label>Salary</label>
+
+          <input
+            type="text"
+            name="salary"
+            [(ngModel)]="job.salary"
+            placeholder="e.g. ₹4 - 6 LPA"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Job Type</label>
+
+          <select
+            name="jobType"
+            [(ngModel)]="job.jobType"
+            required
+          >
+
+            <option value="">
+              Select Job Type
+            </option>
+
+            <option value="Full Time">
+              Full Time
+            </option>
+
+            <option value="Part Time">
+              Part Time
+            </option>
+
+            <option value="Internship">
+              Internship
+            </option>
+
+            <option value="Remote">
+              Remote
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>Job Description</label>
+
+        <textarea
+          name="description"
+          [(ngModel)]="job.description"
+          placeholder="Enter complete job description"
+          rows="6"
+          required>
+        </textarea>
+
+      </div>
+
+
+      <div class="form-actions">
+
+        <button
+          type="button"
+          class="cancel-btn"
+          (click)="router.navigate(['/jobs'])">
+
+          Cancel
+
+        </button>
+
+        <button
+          type="submit"
+          class="post-btn">
+
+          Post Job
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

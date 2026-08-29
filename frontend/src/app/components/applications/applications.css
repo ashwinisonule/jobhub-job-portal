@@ -1,0 +1,161 @@
+.applications-page {
+  min-height: 100vh;
+  background: #fff7fa;
+  padding: 50px 25px;
+}
+
+.page-header {
+  max-width: 1050px;
+  margin: 0 auto 35px;
+}
+
+.page-label {
+  color: #ff4081;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.page-header h1 {
+  margin: 8px 0;
+  font-size: 36px;
+  color: #222;
+}
+
+.page-header p {
+  color: #777;
+}
+
+.loading,
+.empty-state {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 50px;
+  text-align: center;
+  background: white;
+  border-radius: 13px;
+  border: 1px solid #f0dce5;
+}
+
+.applications-list {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.application-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  margin-bottom: 18px;
+  background: white;
+  border: 1px solid #f0dce5;
+  border-radius: 13px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+}
+
+.company-logo {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #ff4081;
+  color: white;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.application-content {
+  flex: 1;
+}
+
+.application-content h2 {
+  margin: 0 0 7px;
+  color: #222;
+}
+
+.application-content h3 {
+  margin: 0 0 18px;
+  color: #ff4081;
+  font-size: 15px;
+}
+
+.details-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 13px;
+}
+
+.skills {
+  margin-top: 12px;
+  color: #555;
+  font-size: 13px;
+}
+
+.cover-letter {
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: #fff7fa;
+  border-radius: 7px;
+  font-size: 13px;
+}
+
+.cover-letter p {
+  margin: 6px 0 0;
+}
+
+.applied-date {
+  margin-top: 15px;
+  color: #999;
+  font-size: 12px;
+}
+
+.status {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: #ffe2ec;
+  color: #d81b60;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status.shortlisted {
+  background: #e8f7ee;
+  color: #178a45;
+}
+
+.status.rejected {
+  background: #ffe8e8;
+  color: #d93025;
+}
+
+.empty-icon {
+  font-size: 38px;
+}
+
+.empty-state a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 11px 20px;
+  border-radius: 7px;
+  background: #ff4081;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .applications-page {
+    padding: 35px 15px;
+  }
+
+  .application-card {
+    flex-direction: column;
+  }
+}

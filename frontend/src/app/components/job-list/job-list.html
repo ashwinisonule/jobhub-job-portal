@@ -1,0 +1,91 @@
+<div class="jobs-page">
+
+  <h1>Latest Jobs</h1>
+  <p>{{ filteredJobs.length }} jobs available</p>
+
+  <div class="search-section">
+
+    <input
+  type="text"
+  [(ngModel)]="searchText"
+  (input)="filterJobs()"
+  placeholder="Search job, company or location"
+>
+
+<select
+  [(ngModel)]="selectedLocation"
+  (change)="filterJobs()">
+
+  <option value="">All Locations</option>
+  <option value="Pune">Pune</option>
+  <option value="Mumbai">Mumbai</option>
+  <option value="Nagpur">Nagpur</option>
+  <option value="Yavatmal">Yavatmal</option>
+  <option value="Bangalore">Bangalore</option>
+  <option value="Chennai">Chennai</option>
+  <option value="Hyderabad">Hyderabad</option>
+
+</select>
+
+<select
+  [(ngModel)]="selectedCategory"
+  (change)="filterJobs()">
+
+  <option value="">All Categories</option>
+  <option value="Frontend">Frontend</option>
+  <option value="Backend">Backend</option>
+  <option value="Full Stack">Full Stack</option>
+  <option value="Java">Java</option>
+  <option value="Python">Python</option>
+  <option value="UI/UX">UI/UX</option>
+
+</select>
+    <button (click)="clearFilters()">
+      Clear
+    </button>
+
+  </div>
+
+
+  <div class="job-grid">
+
+    <div
+      class="job-card"
+      *ngFor="let job of filteredJobs">
+
+      <div class="company-logo">
+        {{ job.company.charAt(0) }}
+      </div>
+
+      <h2>{{ job.title }}</h2>
+
+      <h3>{{ job.company }}</h3>
+
+      <p>📍 {{ job.location }}</p>
+
+      <p>💰 {{ job.salary }}</p>
+
+      <p>💼 {{ job.jobType }}</p>
+
+      <span>
+        {{ job.category }}
+      </span>
+
+      <a
+  class="details-btn"
+  [routerLink]="['/job-details', job._id]">
+  View Details
+</a>
+    </div>
+
+
+    <div
+      *ngIf="filteredJobs.length === 0">
+
+      No Jobs Found
+
+    </div>
+
+  </div>
+
+</div>

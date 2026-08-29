@@ -1,0 +1,56 @@
+<div class="login-page">
+
+  <div class="login-card">
+
+    <div class="brand">
+      JOB<span>HUB</span>
+    </div>
+
+    <h1>Welcome Back</h1>
+
+    <p>
+      Login to continue your job search.
+    </p>
+
+    <form
+      (ngSubmit)="login()">
+
+      <label>Email</label>
+
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="loginData.email"
+        placeholder="Enter your email"
+        required
+      >
+
+      <label>Password</label>
+
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="loginData.password"
+        placeholder="Enter your password"
+        required
+      >
+
+      <button type="submit">
+        Login
+      </button>
+
+    </form>
+
+    <div class="bottom-text">
+
+      Don't have an account?
+
+      <a routerLink="/register">
+        Create Account
+      </a>
+
+    </div>
+
+  </div>
+
+</div>

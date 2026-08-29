@@ -1,0 +1,90 @@
+<div class="companies-page">
+
+  <div class="page-header">
+
+    <span class="small-title">
+      JOBHUB
+    </span>
+
+    <h1>
+      Explore Companies
+    </h1>
+
+    <p>
+      Discover companies and explore their available opportunities.
+    </p>
+
+  </div>
+
+
+  <div
+    class="company-grid"
+    *ngIf="companies.length > 0">
+
+    <div
+      class="company-card"
+      *ngFor="let company of companies">
+
+
+      <div class="company-logo">
+
+        {{ company.name.charAt(0).toUpperCase() }}
+
+      </div>
+
+
+      <h2>
+        {{ company.name }}
+      </h2>
+
+
+      <p class="category">
+        {{ company.category }}
+      </p>
+
+
+      <p class="location">
+        📍 {{ company.location }}
+      </p>
+
+
+      <div class="company-bottom">
+
+        <span>
+          {{ company.jobs }}
+          {{ company.jobs === 1 ? 'Job' : 'Jobs' }}
+        </span>
+
+
+        <a
+          [routerLink]="['/jobs']"
+          [queryParams]="{
+            company: company.name
+          }">
+
+          View Jobs →
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div
+    *ngIf="companies.length === 0"
+    class="empty-state">
+
+    <h2>
+      No Companies Found
+    </h2>
+
+    <p>
+      Companies will appear here when jobs are available.
+    </p>
+
+  </div>
+
+</div>

@@ -1,0 +1,199 @@
+.add-job-page {
+  min-height: calc(100vh - 70px);
+
+  padding: 50px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff7fa,
+      #ffe8f0
+    );
+
+  box-sizing: border-box;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.form-header {
+  margin-bottom: 30px;
+}
+
+.form-header > span {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  background: #ff4081;
+
+  color: white;
+
+  border-radius: 5px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.form-header h1 {
+  margin: 15px 0 7px;
+
+  font-size: 30px;
+
+  color: #222;
+}
+
+.form-header p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+.form-row {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #333;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px 14px;
+
+  border:
+    1px solid #dddddd;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #333;
+
+  font-size: 14px;
+
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+
+  border-color: #ff4081;
+
+  box-shadow:
+    0 0 0 2px
+    rgba(255, 64, 129, 0.08);
+}
+
+.form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 10px;
+}
+
+.cancel-btn,
+.post-btn {
+  border: none;
+
+  padding: 12px 22px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #eeeeee;
+
+  color: #444;
+}
+
+.post-btn {
+  background: #ff4081;
+
+  color: white;
+}
+
+.post-btn:hover {
+  background: #e73370;
+}
+
+@media (max-width: 700px) {
+
+  .add-job-page {
+    padding: 30px 15px;
+  }
+
+  .form-card {
+    padding: 25px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .post-btn {
+    width: 100%;
+  }
+
+}
