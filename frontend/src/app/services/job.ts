@@ -18,7 +18,7 @@ export interface Job {
 })
 export class JobService {
 
-  private apiUrl = 'http://localhost:5000/api/jobs';
+  private apiUrl = 'https://jobhub-job-portal.onrender.com/api/jobs';
 
   constructor(private http: HttpClient) {}
 

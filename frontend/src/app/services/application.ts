@@ -31,7 +31,7 @@ export interface Application {
 export class ApplicationService {
 
   private apiUrl =
-    'http://localhost:5000/api/applications';
+    'https://jobhub-job-portal.onrender.com/api/applications';
 
   constructor(
     private http: HttpClient

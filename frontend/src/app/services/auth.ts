@@ -20,7 +20,7 @@ export interface User {
 export class AuthService {
 
   private apiUrl =
-    'http://localhost:5000/api/users';
+    'https://jobhub-job-portal.onrender.com/api/users';
 
   constructor(
     private http: HttpClient
