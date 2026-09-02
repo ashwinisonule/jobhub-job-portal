@@ -6,46 +6,43 @@
   <div class="search-section">
 
     <input
-  type="text"
-  [(ngModel)]="searchText"
-  (input)="filterJobs()"
-  placeholder="Search job, company or location"
->
+      type="text"
+      [(ngModel)]="searchText"
+      placeholder="Search job, company or location"
+    >
 
-<select
-  [(ngModel)]="selectedLocation"
-  (change)="filterJobs()">
+    <select
+      [(ngModel)]="selectedLocation">
 
-  <option value="">All Locations</option>
-  <option value="Pune">Pune</option>
-  <option value="Mumbai">Mumbai</option>
-  <option value="Nagpur">Nagpur</option>
-  <option value="Yavatmal">Yavatmal</option>
-  <option value="Bangalore">Bangalore</option>
-  <option value="Chennai">Chennai</option>
-  <option value="Hyderabad">Hyderabad</option>
+      <option value="">All Locations</option>
+      <option value="Pune">Pune</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Nagpur">Nagpur</option>
+      <option value="Yavatmal">Yavatmal</option>
+      <option value="Bangalore">Bangalore</option>
+      <option value="Chennai">Chennai</option>
+      <option value="Hyderabad">Hyderabad</option>
 
-</select>
+    </select>
 
-<select
-  [(ngModel)]="selectedCategory"
-  (change)="filterJobs()">
+    <select
+      [(ngModel)]="selectedCategory">
 
-  <option value="">All Categories</option>
-  <option value="Frontend">Frontend</option>
-  <option value="Backend">Backend</option>
-  <option value="Full Stack">Full Stack</option>
-  <option value="Java">Java</option>
-  <option value="Python">Python</option>
-  <option value="UI/UX">UI/UX</option>
+      <option value="">All Categories</option>
+      <option value="Frontend">Frontend</option>
+      <option value="Backend">Backend</option>
+      <option value="Full Stack">Full Stack</option>
+      <option value="Java">Java</option>
+      <option value="Python">Python</option>
+      <option value="UI/UX">UI/UX</option>
 
-</select>
+    </select>
+
     <button (click)="clearFilters()">
       Clear
     </button>
 
   </div>
-
 
   <div class="job-grid">
 
@@ -72,18 +69,15 @@
       </span>
 
       <a
-  class="details-btn"
-  [routerLink]="['/job-details', job._id]">
-  View Details
-</a>
+        class="details-btn"
+        [routerLink]="['/job-details', job._id]">
+        View Details
+      </a>
+
     </div>
 
-
-    <div
-      *ngIf="filteredJobs.length === 0">
-
+    <div *ngIf="filteredJobs.length === 0">
       No Jobs Found
-
     </div>
 
   </div>
